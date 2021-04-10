@@ -1,0 +1,44 @@
+.jumbotron {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg.png);
+  height: 800px;
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+.navbrand {
+  padding-left: 50px;
+}
+
+.btn-danger {
+  background-color: #ea4020;
+  border-color: #ea4020 ;
+}
+
+.my-4 {
+  border-color: #ea4020;
+  height: 1px;
+}
+
+.display-4 {
+  color: #ea4020;
+}
+
+.button{
+  background-color: #ea4020 !important;
+}
+
+.card {
+  border: none;
+}
+
+.img-top {
+  
+}
+
+@media (max-width: 850px) {
+  .jumbotron{
+    background-position: 50% 50%;
+  }
+}
