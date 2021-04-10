@@ -40,6 +40,11 @@
   border: none;
 }
 
+.img-top {
+  max-width: 75%;
+  max-height: 75%;
+}
+
 @media (max-width: 900px) {
   .jumbotron{
     background-position: 50% 50%;
