@@ -1,5 +1,5 @@
 .jumbotron {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-lg.png);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(img/jumbotron-bg-lg.png);
   background-size: cover;
   background-position: bottom center;
   background-attachment: scroll;
