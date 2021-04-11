@@ -33,69 +33,71 @@
     </header>
     <!-- Begin jumbotron-->
     <div class="jumbotron text-center text-white">
-      <h1 class="display-4"><strong>Décode le code</strong></h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <!-- Begin Mailchimp Signup Form -->
-<div class="mailchimp" id="mc_embed_signup">
-  <form action="https://gmail.us1.list-manage.com/subscribe/post?u=5e63fdb953b263b04c895f385&amp;id=d0795d584a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-    <label style="color: #ea4020;" for="mce-EMAIL">Rejoins le mouvement</label>
-    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="adresse email" required>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e63fdb953b263b04c895f385_d0795d584a" tabindex="-1" value=""></div>
-      <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-danger"></div>
+      <div class="container-fluid" style="margin-top: 90px;" id="CTA">
+        <h1 class="display-4"><strong>Décode le code</strong></h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       </div>
-  </form>
-  </div>
-  <!--End mc_embed_signup-->
-      <div class="text-center" id="scroll"><i class="fas fa-arrow-circle-down fa-2x" onClick="document.getElementById('middle').scrollIntoView();" style="color: #ea4020;"></i></div>
+      <!-- Begin Mailchimp Signup Form -->
+      <div class="mailchimp" id="mc_embed_signup">
+        <form action="https://gmail.us1.list-manage.com/subscribe/post?u=5e63fdb953b263b04c895f385&amp;id=d0795d584a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label style="color: #ea4020;" for="mce-EMAIL">Rejoins le mouvement</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="adresse email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e63fdb953b263b04c895f385_d0795d584a" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-danger"></div>
+          </div>
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+      <div class="text-center" id="scroll">
+        <i class="fas fa-arrow-circle-down fa-2x" onClick="document.getElementById('middle').scrollIntoView();" style="color: #ea4020;"></i>
+      </div>
     </div>
     <!--End Jumbotron-->
-    <div class="d-flex flex-row justify-content-around" id="middle">
-      <div class="p-4 card">
+    <div class="row card-deck" id="middle">
+      <div class="p-4 card card-mid">
         <img class="img-top align-self-center" src="img/dylan-code.png" alt="Dylan Code">
-        <p class=" lead text-center">Et l’Homme créa le code</p>
+        <p class=" header text-center">Et l’Homme créa le code</p>
         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit dignissim maximus. Sed varius posuere magna eget facilisis. Maecenas pulvinar placerat neque id egestas. Vivamus ut lectus sed velit ullamcorper laoreet. Pellentesque suscipit nisl sit amet risus ultricies, in convallis mi consectetur. Nunc consectetur lorem vel nibh cursus, ut consequat.</p>
       </div>
-      <div class="p-4 card">
+      <div class="p-4 card card-mid">
         <img class="img-top align-self-center" src="img/axel-pensif.png" alt="Axel Pensif">
-        <p class=" lead text-center">Concrètement, ça sert à quoi ?</p>
+        <p class=" header text-center">Concrètement, ça sert à quoi ?</p>
         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit dignissim maximus. Sed varius posuere magna eget facilisis. Maecenas pulvinar placerat neque id egestas. Vivamus ut lectus sed velit ullamcorper laoreet. Pellentesque suscipit nisl sit amet risus ultricies, in convallis mi consectetur. Nunc consectetur lorem vel nibh cursus, ut consequat.</p>
       </div>
-      <div class="p-4 card">
+      <div class="p-4 card card-mid">
         <img class="img-top align-self-center" src="img/thomas-wtf.png" alt="Clarisse Cligne de l'Oeil Droit">
-        <p class=" lead text-center">Pourquoi s'intéresser au code</p>
+        <p class=" header text-center">Pourquoi s'intéresser au code</p>
         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit dignissim maximus. Sed varius posuere magna eget facilisis. Maecenas pulvinar placerat neque id egestas. Vivamus ut lectus sed velit ullamcorper laoreet. Pellentesque suscipit nisl sit amet risus ultricies, in convallis mi consectetur. Nunc consectetur lorem vel nibh cursus, ut consequat.</p>
       </div>
     </div>
-    <section class="lead">L'équipe</section>
-    <div class=" row card-deck text-center">
+    <section class="lead text-center p-4">L'équipe</section>
+    <div class=" row card-deck text-center" id="middle2">
       <div class="card">
-        <p class="lead">Dylan Bonafos</p>
+        <p class="header">Dylan Bonafos</p>
         <p class="p-2">l</p>
       </div>
       <div class="card">
-        <p class="lead">Jérémy Bourgoin</p>
+        <p class="header">Jérémy Bourgoin</p>
         <p class="p-2">l</p>
       </div>
       <div class="card">
-        <p class="lead">Clarisse Schmitt</p>
-        <p class="p-2">l</p>
-      </div>
-    </div>
-    <div class="row card-deck text-center">
-      <div class="card">
-        <p class="lead">Axel Tarifa</p>
+        <p class="header">Clarisse Schmitt</p>
         <p class="p-2">l</p>
       </div>
       <div class="card">
-        <p class="lead">Thomas Tiber</p>
+        <p class="header">Axel Tarifa</p>
         <p class="p-2">l</p>
       </div>
       <div class="card">
-        <p class="lead">Adrien Torres</p>
+        <p class="header">Thomas Tiber</p>
+        <p class="p-2">l</p>
+      </div>
+      <div class="card">
+        <p class="header">Adrien Torres</p>
         <p class="p-2">l</p>
       </div>
     </div>

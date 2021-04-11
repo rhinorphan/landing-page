@@ -1,10 +1,10 @@
 .jumbotron {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(jumbotron-bg.png);
-  height: 750px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-lg.png);
   background-size: cover;
-  background-position: 0 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: scroll;
+  min-height: 93vh;
+  width: 100%;
   border-radius: 0;
 }
 
@@ -32,21 +32,46 @@
 
 #scroll {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   left: 50%;
 }
 
-.card {
+#middle {
+  min-height: 50vh;
+}
+
+.card-mid {
   border: none;
 }
 
 .img-top {
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
-@media (max-width: 900px) {
+#middle2 {
+  min-height: 35vh;
+}
+
+@media (max-width: 1024px) {
   .jumbotron{
-    background-position: 50% 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-md.png);
+    background-position: bottom center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .jumbotron {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-sm.png);
+    background-position: bottom center;
+  }
+  #CTA {
+    margin-top: Opx;
+  }
+  #scroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
   }
 }
