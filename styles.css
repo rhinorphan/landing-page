@@ -1,9 +1,11 @@
 .jumbotron {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(https://github.com/rhinorphan/landing-page/blob/master/img/jumbotron-bg-lg.png);
+  background-color: #ea4020;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(img/jumbotron-bg-lg.png);
   background-size: cover;
   background-position: bottom center;
   background-attachment: scroll;
-  min-height: 93vh;
+  background-repeat: no-repeat;
+  min-height: 90vh;
   width: 100%;
   border-radius: 0;
 }
@@ -36,12 +38,13 @@
   left: 50%;
 }
 
-#middle {
-  min-height: 50vh;
-}
-
 .card-mid {
   border: none;
+}
+
+.icons {
+  color: #ea4020;
+  padding-bottom: 10px;
 }
 
 .img-top {
@@ -49,14 +52,19 @@
   max-height: 50%;
 }
 
-#middle2 {
-  min-height: 35vh;
+.team {
+  background-color: rgb(235, 235, 235);
+}
+
+.bouton {
+  color: #ea4020;
 }
 
 @media (max-width: 1024px) {
   .jumbotron{
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-md.png);
     background-position: bottom center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 }
@@ -65,6 +73,8 @@
   .jumbotron {
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6) 100%), url(/img/jumbotron-bg-sm.png);
     background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #CTA {
     margin-top: Opx;
