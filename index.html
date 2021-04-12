@@ -13,8 +13,9 @@
 	    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles.css">
-    <title>21</title>
+    <title>Twone</title>
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <img src="img/Team_21.png" alt="" width="60" height="48">
+            <img src="img/logo-twone.png" alt="" width="60" height="60">
           </a>
           <a href="https://gmail.us1.list-manage.com/subscribe/post?u=5e63fdb953b263b04c895f385&id=d0795d584a" target="_blank" rel="noopener noreferrer">
             <button type="button" class="btn btn-danger">S'inscrire</button>
@@ -34,7 +35,10 @@
     <!-- Begin jumbotron-->
     <div class="jumbotron text-center text-white">
       <div class="container-fluid" style="margin-top: 50px;" id="CTA">
-        <h1 class="display-4"><strong>Décode le code</strong></h1>
+        <h1 class="display-4"><strong>Décode <span
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='[ "le code.", "HTML.", "Ruby.", "CSS." ]'></span></strong></h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -129,6 +133,64 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      var TxtRotate = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+      };
+    
+      TxtRotate.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+    
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+    
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+    
+        var that = this;
+        var delta = 300 - Math.random() * 100;
+    
+        if (this.isDeleting) { delta /= 2; }
+    
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+    
+        setTimeout(function() {
+          that.tick();
+        }, delta);
+      };
+    
+      window.onload = function() {
+        var elements = document.getElementsByClassName('txt-rotate');
+        for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-rotate');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+        document.body.appendChild(css);
+      };
+    </script> 
   </body>
 </html>
 
